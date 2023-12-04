@@ -10,4 +10,5 @@ runs:
   using: composite
   steps:
     - name: Install component
-      run: echo installing component version ${{ inputs.version }}
+      uses: docker://alpine:3.17
+      run: echo installing component "${{ github.repository }}" version "${{ inputs.version }}"
